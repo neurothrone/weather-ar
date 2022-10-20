@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+  @EnvironmentObject var arViewController: ARViewController
+  
   @FocusState var isSearchTextFocused: Bool
   
   @State private var searchText = ""
   @State private var isSearchTextVisible = true
   @State private var cityWeather: CityWeather?
   
-  private let service: WeatherService = .shared
+  
+  private let weatherService: WeatherService = .shared
   
   var body: some View {
     NavigationStack {
@@ -23,7 +26,7 @@ struct ContentView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onSubmit(of: .text) {
           Task {
-            cityWeather = try await service.fetchWeatherByCity(name: searchText)
+            arViewController.receivedCityWeather = try await weatherService.fetchWeatherByCity(name: searchText)
           }
         }
         .toolbar {
@@ -49,38 +52,23 @@ struct ContentView: View {
   }
   
   var content: some View {
-    VStack {
-      SearchBar(
-        searchText: $searchText,
-        isSearchTextFocused: $isSearchTextFocused
-      )
-      .padding()
-      .background(.purple.opacity(0.25))
-      .blur(radius: isSearchTextVisible ? 0 : 10)
-      .offset(y: isSearchTextVisible ? 0: -200)
-      .animation(.linear, value: isSearchTextVisible)
+    ZStack {
+      ARViewContainer()
+        .edgesIgnoringSafeArea(.all)
       
-      if let cityWeather {
-        VStack(alignment: .leading) {
-          HStack {
-            Text(cityWeather.cityName)
-              .font(.headline)
-            
-            Spacer()
-            
-            Text(cityWeather.temperature.formatted())
-              .foregroundColor(.orange)
-          }
-          
-          HStack {
-            Spacer()
-            Text(cityWeather.condition)
-          }
-        }
+      VStack {
+        SearchBarView(
+          searchText: $searchText,
+          isSearchTextFocused: $isSearchTextFocused
+        )
         .padding()
+        .background(.purple.opacity(0.25))
+        .blur(radius: isSearchTextVisible ? 0 : 10)
+        .offset(y: isSearchTextVisible ? 0: -200)
+        .animation(.linear, value: isSearchTextVisible)
+
+        Spacer()
       }
-      
-      Spacer()
     }
   }
 }
@@ -88,37 +76,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
-  }
-}
-
-struct SearchBar: View {
-  @Binding var searchText: String
-  var isSearchTextFocused: FocusState<Bool>.Binding
-  
-  var body: some View {
-    HStack {
-      Image(systemName: "magnifyingglass")
-        .foregroundColor(
-          isSearchTextFocused.wrappedValue
-          ? .purple
-          : .primary
-        )
-      
-      TextField("Search", text: $searchText)
-        .focused(isSearchTextFocused)
-        .autocorrectionDisabled(true)
-        .submitLabel(.search)
-    }
-    .padding(10)
-    .background(
-      RoundedRectangle(cornerRadius: 20)
-        .stroke(lineWidth: 1)
-        .fill(
-          isSearchTextFocused.wrappedValue
-          ? .purple
-          : .primary
-        )
-    )
-    .animation(.linear, value: isSearchTextFocused.wrappedValue)
+      .environmentObject(ARViewController.shared)
   }
 }

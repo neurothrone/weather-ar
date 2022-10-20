@@ -15,6 +15,17 @@
 		2FA4988728FFCDDB00655D76 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4988628FFCDDB00655D76 /* WeatherData.swift */; };
 		2FA4988928FFD03F00655D76 /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4988828FFD03F00655D76 /* WeatherModels.swift */; };
 		2FA4988E2900D29900655D76 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4988D2900D29900655D76 /* Configuration.swift */; };
+		2FA498912900E22800655D76 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA498902900E22800655D76 /* ARViewContainer.swift */; };
+		2FA498932900E2B900655D76 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA498922900E2B900655D76 /* ARViewController.swift */; };
+		2FA498992900E81B00655D76 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA498982900E81B00655D76 /* SearchBarView.swift */; };
+		2FA4989B2900EAB700655D76 /* ARView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4989A2900EAB700655D76 /* ARView+Extensions.swift */; };
+		2FA498A42900F9D200655D76 /* ARWeatherModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA498A32900F9D200655D76 /* ARWeatherModelManager.swift */; };
+		2FA498A52901024000655D76 /* fog.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2FA4989E2900F97400655D76 /* fog.mp4 */; };
+		2FA498A62901024000655D76 /* sunny.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2FA4989D2900F97400655D76 /* sunny.mp4 */; };
+		2FA498A72901024000655D76 /* thunder.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2FA498A22900F97400655D76 /* thunder.mp4 */; };
+		2FA498A82901024000655D76 /* rainy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2FA498A02900F97400655D76 /* rainy.mp4 */; };
+		2FA498A92901024000655D76 /* snowy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2FA498A12900F97400655D76 /* snowy.mp4 */; };
+		2FA498AA2901024000655D76 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2FA4989F2900F97400655D76 /* normal.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +41,17 @@
 		2FA4988B2900D23700655D76 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		2FA4988C2900D27300655D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA4988D2900D29900655D76 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		2FA498902900E22800655D76 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		2FA498922900E2B900655D76 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		2FA498982900E81B00655D76 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		2FA4989A2900EAB700655D76 /* ARView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARView+Extensions.swift"; sourceTree = "<group>"; };
+		2FA4989D2900F97400655D76 /* sunny.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunny.mp4; sourceTree = "<group>"; };
+		2FA4989E2900F97400655D76 /* fog.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fog.mp4; sourceTree = "<group>"; };
+		2FA4989F2900F97400655D76 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
+		2FA498A02900F97400655D76 /* rainy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rainy.mp4; sourceTree = "<group>"; };
+		2FA498A12900F97400655D76 /* snowy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = snowy.mp4; sourceTree = "<group>"; };
+		2FA498A22900F97400655D76 /* thunder.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = thunder.mp4; sourceTree = "<group>"; };
+		2FA498A32900F9D200655D76 /* ARWeatherModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWeatherModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +84,9 @@
 		2FA4987228FFB59F00655D76 /* WeatherAR */ = {
 			isa = PBXGroup;
 			children = (
-				2FA4988F2900E1F400655D76 /* AR */,
 				2FA4988228FFC68400655D76 /* App */,
 				2FA4988128FFC68100655D76 /* Weather */,
+				2FA4988F2900E1F400655D76 /* AR */,
 				2FA4988328FFC68600655D76 /* UI */,
 				2FA4987928FFB5A000655D76 /* Preview Content */,
 			);
@@ -98,6 +120,7 @@
 				2FA4988B2900D23700655D76 /* Production.xcconfig */,
 				2FA4987728FFB5A000655D76 /* Assets.xcassets */,
 				2FA4988C2900D27300655D76 /* Info.plist */,
+				2FA4989C2900F95C00655D76 /* Videos */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -106,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA4987528FFB59F00655D76 /* ContentView.swift */,
+				2FA498982900E81B00655D76 /* SearchBarView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -113,8 +137,25 @@
 		2FA4988F2900E1F400655D76 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				2FA498922900E2B900655D76 /* ARViewController.swift */,
+				2FA498902900E22800655D76 /* ARViewContainer.swift */,
+				2FA4989A2900EAB700655D76 /* ARView+Extensions.swift */,
+				2FA498A32900F9D200655D76 /* ARWeatherModelManager.swift */,
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		2FA4989C2900F95C00655D76 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				2FA4989E2900F97400655D76 /* fog.mp4 */,
+				2FA4989F2900F97400655D76 /* normal.mp4 */,
+				2FA498A02900F97400655D76 /* rainy.mp4 */,
+				2FA498A12900F97400655D76 /* snowy.mp4 */,
+				2FA4989D2900F97400655D76 /* sunny.mp4 */,
+				2FA498A22900F97400655D76 /* thunder.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +216,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA498A72901024000655D76 /* thunder.mp4 in Resources */,
+				2FA498A82901024000655D76 /* rainy.mp4 in Resources */,
+				2FA498AA2901024000655D76 /* normal.mp4 in Resources */,
+				2FA498A52901024000655D76 /* fog.mp4 in Resources */,
+				2FA498A62901024000655D76 /* sunny.mp4 in Resources */,
 				2FA4987B28FFB5A000655D76 /* Preview Assets.xcassets in Resources */,
 				2FA4987828FFB5A000655D76 /* Assets.xcassets in Resources */,
+				2FA498A92901024000655D76 /* snowy.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,11 +234,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA498992900E81B00655D76 /* SearchBarView.swift in Sources */,
 				2FA4988E2900D29900655D76 /* Configuration.swift in Sources */,
+				2FA498A42900F9D200655D76 /* ARWeatherModelManager.swift in Sources */,
 				2FA4987628FFB59F00655D76 /* ContentView.swift in Sources */,
 				2FA4988528FFC6C100655D76 /* WeatherService.swift in Sources */,
+				2FA498932900E2B900655D76 /* ARViewController.swift in Sources */,
+				2FA498912900E22800655D76 /* ARViewContainer.swift in Sources */,
 				2FA4988728FFCDDB00655D76 /* WeatherData.swift in Sources */,
 				2FA4987428FFB59F00655D76 /* WeatherARApp.swift in Sources */,
+				2FA4989B2900EAB700655D76 /* ARView+Extensions.swift in Sources */,
 				2FA4988928FFD03F00655D76 /* WeatherModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +379,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherAR/App/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera for the AR functionality to work";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,6 +410,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherAR/App/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera for the AR functionality to work";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

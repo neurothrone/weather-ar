@@ -16,17 +16,17 @@ extension HasWeatherCondition {
   var condition: String {
     switch conditionID {
     case 200...232, 801...804:
-      return "Thunder"
+      return "thunder"
     case 300...321, 500...531:
-      return "Rainy"
+      return "rainy"
     case 600...622:
-      return "Snow"
+      return "snow"
     case 701...781:
-      return "Fog"
+      return "fog"
     case 800:
-      return "Sunny"
+      return "sunny"
     default:
-      return "Normal"
+      return "normal"
     }
   }
 }
@@ -35,6 +35,12 @@ struct CityWeather: HasWeatherCondition {
   let cityName: String
   let temperature: Double
   var conditionID: Int
+  
+  init(cityName: String, temperature: Double, conditionID: Int) {
+    self.cityName = cityName
+    self.temperature = temperature
+    self.conditionID = conditionID
+  }
   
   init(cityWeatherData: CityWeatherData) {
     cityName = cityWeatherData.name
