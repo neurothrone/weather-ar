@@ -28,7 +28,7 @@
 		2FA4988828FFD03F00655D76 /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
 		2FA4988A2900D20C00655D76 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		2FA4988B2900D23700655D76 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		2FA4988C2900D27300655D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2FA4988C2900D27300655D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA4988D2900D29900655D76 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,7 @@
 		2FA4987228FFB59F00655D76 /* WeatherAR */ = {
 			isa = PBXGroup;
 			children = (
-				2FA4988C2900D27300655D76 /* Info.plist */,
+				2FA4988F2900E1F400655D76 /* AR */,
 				2FA4988228FFC68400655D76 /* App */,
 				2FA4988128FFC68100655D76 /* Weather */,
 				2FA4988328FFC68600655D76 /* UI */,
@@ -97,6 +97,7 @@
 				2FA4988A2900D20C00655D76 /* Development.xcconfig */,
 				2FA4988B2900D23700655D76 /* Production.xcconfig */,
 				2FA4987728FFB5A000655D76 /* Assets.xcassets */,
+				2FA4988C2900D27300655D76 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -107,6 +108,13 @@
 				2FA4987528FFB59F00655D76 /* ContentView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2FA4988F2900E1F400655D76 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +326,7 @@
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherAR/Info.plist;
+				INFOPLIST_FILE = WeatherAR/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,7 +356,7 @@
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherAR/Info.plist;
+				INFOPLIST_FILE = WeatherAR/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
